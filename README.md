@@ -7,11 +7,13 @@
 npm install
 ```
 3) setup .env file
+```
 export MARVEL_URL=https://gateway.marvel.com
 export MARVEL_KEY=public_key
 export MARVEL_PRIVATE_KEY=private_key
 export MARVEL_TS=any_random_key
 export MARVEL_REFRESH=60 * 60 * 24 * 1000 // numeric milliseconds to determine when to check marvel for updates
+```
 
 ## To run
 ```bash
