@@ -1,0 +1,22 @@
+{
+  "typeAcquisition": {
+    "include": [ "jest" ]
+  },
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@controller/*": ["src/controller/*"],
+      "@service/*": ["src/service/*"],
+      "@builder/*": ["src/builder/*"],
+      "@formatter/*": ["src/formatter/*"],
+      "@model/*": ["src/model/*"],
+      "@logger": ["src/common/logger"],
+      "@common": ["src/common"],
+      "@src/*": ["src/*"],
+      "@error/*": ["src/error/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

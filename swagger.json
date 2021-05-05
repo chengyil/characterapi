@@ -1,0 +1,89 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Marvel Characters",
+        "description": "Marvel Characters"
+    },
+    "host": "home-local.staging-achilles.systems:8080",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Characters",
+            "description": "Marvel Characters"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/api/v1/characters": {
+            "produces": [
+                "application/stream+json"
+            ],
+            "get": {
+                "tags": [
+                    "Characters"
+                ],
+                "summary": "Get all marvel characters id",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ids"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/characters/{id}": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID of marvel character",
+                    "type": "integer"
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Characters"
+                ],
+                "summary": "Get marvel characters",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Character"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "id": {
+            "type": "integer",
+            "uniqueItems": true
+        },
+        "ids": {
+            "type": "array",
+            "$ref": "#/definitions/id"
+        },
+        "Character": {
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "uniqueItems": true
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

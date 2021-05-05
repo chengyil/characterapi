@@ -1,0 +1,37 @@
+{
+  "name": "marvel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "jest": "^26.6.3",
+    "module-alias": "^2.2.2",
+    "rxjs": "^7.0.0",
+    "swagger-ui-express": "^4.1.6",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "_moduleAliases": {
+    "@controller": "src/controller",
+    "@service": "src/service",
+    "@model": "src/model",
+    "@builder": "src/builder",
+    "@formatter": "src/formatter",
+    "@logger": "src/common/logger",
+    "@common": "src/common",
+    "@error": "src/error"
+  }
+}
