@@ -85,13 +85,13 @@ module.exports = class Cache {
     if (this.isNew()) {
       logger.info('from api');
       this.initCache();
-      return this.init$;
+      return this.pending$;
     } else if (this.isReady()) {
       logger.info('from cache');
       return from(Object.values(this.cache));
     } else {
       logger.info('from pending');
-      return this.init$;
+      return this.pending$;
     }
   }
 };
